@@ -27,11 +27,11 @@ pipeline {
             }
         }
 
-        stage('Analise de Vulnerabilidades') {
+      stage('Analise de Vulnerabilidades') {
     steps {
         dependencyCheck(
             odcInstallation: 'DependencyCheck',
-            additionalArguments: '--scan .'
+            additionalArguments: '--scan . --nvdApiKey 2a9c031d-0523-4d66-98cd-3001b885f026'
         )
     }
 }
